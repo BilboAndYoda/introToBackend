@@ -1,0 +1,13 @@
+<% include partials/header %>
+<% var message = "It has gone "; %>
+<% if(trend < 0){ %>
+<%    message += "down "; %>
+<% }else{ %>
+<%   message+= "up "; %>
+<% } %>
+<% message+=trend.substr(1) + "% in the last 7 days"; %>
+
+<h1>The price of <%=coin%> is <%=price%><br><%=message%></h1>
+
+
+<% include partials/footer %>
